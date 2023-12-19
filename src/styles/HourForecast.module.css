@@ -1,0 +1,34 @@
+.item {
+	color: var(--var-background-white);
+	padding: 20px 8px;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(var(--var-light-purple), var(--var-blue));
+	border-radius: 30px;
+	border: var(--var-blue) 3px solid;
+	width: 65px;
+	align-items: center;
+	transition: .2s;
+}
+
+.item:last-child {
+	margin-right: 30px;
+}
+
+.item:hover {
+	cursor: pointer;
+	border: 3px yellow solid;
+	color: yellow;
+}
+
+.icon {
+	width: 64px;
+	height: 64px;
+	height: auto;
+}
+
+@media (orientation: landscape) {
+	.item:last-child {
+		margin-right: 90px;
+	}
+}

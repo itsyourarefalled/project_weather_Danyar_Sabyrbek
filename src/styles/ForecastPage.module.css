@@ -1,0 +1,202 @@
+.page {
+	display: flex;
+	height: 95vh;
+	background: linear-gradient(var(--var-background-white), #BBA3FF);
+	flex-direction: column;
+	gap: 80px;
+	align-items: flex-start;
+	color: #FCFCFC;
+	padding: 50px;
+	padding-bottom: 0;
+}
+
+.days {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
+
+.head {
+	display: flex;
+}
+
+.back {
+	gap: 8px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #BBA3FF;
+	color: #FCFCFC;
+	border-radius: 150px;
+	cursor: pointer;
+	border: none;
+	padding: 10px 30px;
+}
+
+.back:hover {
+	background-color: #7655d1;
+}
+
+.main {
+	margin: 0px 100px;
+}
+
+.city {
+	font-size: 70px;
+}
+
+.day {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+}
+
+.mainInfo {
+	gap: 2px;
+	display: flex;
+	align-items: center;
+}
+
+.temp {
+	width: max-content;
+	font-weight: 100;
+	font-size: 38px;
+}
+
+.icon {
+	width: 60px;
+	height: 60px;
+}
+
+
+.exit {
+	cursor: pointer;
+	color: white;
+	position: fixed;
+	top: 0;
+	right: 0;
+	border: none;
+	width: 70px;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 0.183);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.exit:hover {
+	background-color: rgba(255, 255, 255, 0.331);
+}
+
+.dayHeader {
+	font-weight: 100;
+	font-size: 32px;
+	margin-left: 40px;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	color: #FCFCFC;
+	width: fit-content;
+	height: fit-content;
+	padding: 15px 30px;
+	background: #7655d1;
+}
+
+.dayContent {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+	padding: 10px 30px;
+	border-radius: 50px;
+	width: max-content;
+	background: linear-gradient(120deg, #7655d1, var(--var-blue));
+}
+
+.title {
+	color: #7655d1;
+	font-size: 60px;
+}
+
+.condition {
+	font-weight: 200;
+	font-size: 30px;
+}
+
+.additionalInfo {
+	display: flex;
+	align-items: center;
+	color: #ffe500;
+	gap: 16px;
+}
+
+.date {
+	font-weight: 100;
+}
+
+.avgInfo {
+	gap: 8px;
+	display: flex;
+	align-items: center;
+	font-weight: 900;
+}
+
+.list {
+	padding-bottom: 20px;
+	overflow-x: scroll;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.avgTxt {
+	font-size: 25px;
+}
+
+.locationIcon {
+	width: 50px;
+	height: 50px;
+}
+
+.cityIcon {
+	width: 35px;
+	height: 35px;
+}
+
+.cityItem {
+	display: flex;
+	gap: 10px;
+	animation: showup .8s 1;
+	border: 2px var(--var-blue) solid;
+	transition: .2s;
+	padding-left: 20px;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 40px;
+	width: max-content;
+	padding: 10px 26px;
+	text-decoration: none;
+	height: 40px;
+	text-wrap: nowrap;
+	background: linear-gradient(120deg, var(--var-primary-purple), var(--var-light-purple));
+}
+
+.cityItem:hover {
+	transform: scaleX(1.1);
+}
+
+@keyframes showup {
+	from {
+		filter: opacity(0);
+		transform: translateY(-100px);
+	}
+	to {
+		filter: opacity(1);
+		transform: translateY(0px);
+	}
+}

@@ -1,0 +1,262 @@
+.App {
+	stroke: var(--var-blue);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+.background_gradient {
+	padding: 20px 0px;
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+	width: 100vw;
+	background: linear-gradient(var(--var-background-white), #BBA3FF)
+}
+
+.locationIcon {
+	width: 30px;
+	height: 30px;
+}
+
+.myContainer {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 90vw;
+}
+
+.location {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--var-primary-purple);
+}
+
+.city_name {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.date {
+	font-weight: 200;
+}
+
+.temp {
+	z-index: 1;
+	font-size: 800%;
+	font-weight: 900; /* Adjust the font size as needed */
+    background: -webkit-linear-gradient(var(--var-background-white), var(--var-blue));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(var(--var-primary-purple) 0px 20px 20px);
+	line-height: 100%;
+}
+
+.main_panel {
+	align-self: center;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 70vw;
+	height: auto;
+	border-radius: 40px;
+	background-color: var(--var-blue);
+	border-bottom: 4px var(--var-primary-purple) solid;
+}
+
+.main_panel > * {
+	filter: drop-shadow(var(--var-primary-purple) 0px 20px 20px)
+}
+
+.main_icon {
+	width: 100px;
+	height: 100px;
+}
+
+.condition {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	letter-spacing: 1px;
+}
+
+.condition_text {
+	font-weight: 600;
+	font-size: 7vw;
+	filter: drop-shadow(var(--var-primary-purple) 0px 10px 7px);
+	color: var(--var-background-white);
+}
+
+.info_panel {
+	border-radius: 20px;
+	background-color: var(--var-background-white);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 8px 20px;
+	box-shadow: #4E14E660 0px 23px 30px;
+}
+
+.metric_value {
+	font-size: 20px;
+	color: var(--var-primary-purple);
+	font-weight: 600;
+}
+
+.metric_name {
+	font-size: 16px;
+	color: var(--var-light-purple);
+}
+
+.metric {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.metric_icon {
+	height: 60px;
+}
+
+.today {
+	margin: 15px 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.today_heading {
+	font-weight: 900;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.today_txt {
+	color: var(--var-primary-purple);
+}
+
+.forecast_link {
+	cursor: pointer;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	color: var(--var-light-purple);
+	background-color: transparent;
+	border: none;
+}
+
+.cityItem {
+	margin-right: 30px;
+}
+
+.list {
+	padding-left: 30px;
+	width: 100vw;
+	overflow-x: scroll;
+	margin-top: 20px;
+	display: flex;
+	gap: 20px;
+	padding-bottom: 10px;
+}
+
+.cities {
+	align-items: center;
+	width: 100vw;
+	overflow-x: scroll;
+	display: flex;
+	gap: 20px;
+	padding: 20px 0px 50px 30px;
+}
+
+.forecast_link:hover {
+	color: var(--var-primary-purple);
+}
+
+.icon {
+	color: var(--var-primary-purple);
+}
+
+@media (orientation: landscape) {
+	.main {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: 60% 40%;
+		justify-items: end;
+	}
+	.location {
+		grid-column: 1 / 1.6;
+		width: 100%;		
+		height: min-content;
+	}
+	.main_panel {
+		padding: 70px;
+		gap: 20px;
+		justify-self: start;
+		order: 1;
+		width: 80%;
+		grid-row: 1 / 3;
+		grid-column: 1.7 / 3;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	.condition {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.info_panel {
+		grid-column: 1 / 1.6;
+		order: 2;
+		width: 90%;
+		height: min-content;
+	}
+	.today {
+		grid-column: 1 / 3;
+		order: 3;
+		width: 100%;
+	}
+	.temp {
+		font-size: 220px;
+	}
+	.condition_text {
+		font-size: 50px;
+	}
+
+	.background_gradient {
+		min-height: 100VH;
+	}
+	.list {
+		padding-left: 100px;
+	}
+	.main_icon {
+		width: 140px;
+		height: 140px;
+	}
+	.metric_name {
+		font-size: 24px;
+		font-weight: 300;
+	}
+	.metric_value {
+		font-weight: 500;
+		font-size: 30px;
+	}
+	.metric_icon {
+		width: 70px;
+		height: 70px;
+	}
+}

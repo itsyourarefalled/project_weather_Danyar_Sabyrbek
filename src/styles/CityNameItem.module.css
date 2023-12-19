@@ -1,0 +1,15 @@
+.city {
+	animation: showup .8s 1;
+	border: 2px var(--var-blue) solid;
+	transition: .2s;
+	padding-left: 20px;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 40px;
+	width: 30vw;
+	height: 40px;
+	background: linear-gradient(120deg, var(--var-primary-purple), var(--var-light-purple));
+}

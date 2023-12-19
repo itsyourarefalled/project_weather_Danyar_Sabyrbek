@@ -1,0 +1,106 @@
+.modal {
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.493);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.content {
+	height: 80%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	overflow-y: scroll;
+	position: relative;
+}
+
+.content_cover {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgb(2,0,36);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.605) 0%, rgba(9,9,121,0) 10%, rgba(1,1,15,0) 89%, rgba(0, 0, 0, 0.605) 100%);
+}
+
+.city {
+	animation: showup .8s 1;
+	border: 2px var(--var-blue) solid;
+	transition: .2s;
+	padding-left: 20px;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 40px;
+	width: 30vw;
+	height: 40px;
+	background: linear-gradient(120deg, var(--var-primary-purple), var(--var-light-purple));
+}
+
+.exit {
+	cursor: pointer;
+	color: white;
+	position: fixed;
+	top: 0;
+	right: 0;
+	border: none;
+	width: 70px;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 0.183);
+}
+
+.exit:hover {
+	background-color: rgba(255, 255, 255, 0.331);
+}
+
+.city:hover {
+	cursor: pointer;
+	border: 2px yellow solid;
+	color: yellow;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 33px;
+	color: #FCFCFC;
+	position: fixed;
+	top: 60px;
+	left: 30px;
+}
+
+@media (orientation: landscape) {
+	.content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.city {
+		width: 20vw;
+	}
+}
+
+@keyframes showup {
+	from {
+		filter: opacity(0);
+		transform: translateY(-100px);
+	}
+	to {
+		filter: opacity(1);
+		transform: translateY(0px);
+	}
+}

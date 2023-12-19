@@ -1,0 +1,105 @@
+.item {
+	color: white;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-end;
+	background: linear-gradient(90deg, #6E3AFF, #7597FF);
+	padding-left: 70px;
+	height: 60px;
+	position: relative;
+	box-shadow: var(--var-primary-purple) 0px 17px 30px;
+	border-block: 2px transparent solid;
+	transition: .2s;
+}
+
+.item:hover {
+	
+	cursor: pointer;
+	transition: .2s;
+	filter: drop-shadow(rgba(0, 0, 0, 0.289) 4px 4px 10px );
+}
+
+.icon {
+	transition: .2s;
+	position: absolute;
+	left: 4px;
+}
+
+.data {
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.temprature {
+	font-weight: 100;
+	font-size: 40px;
+	color: yellow;
+}
+
+.del {
+	width: 40px;
+	height: 40px;
+}
+
+.delete {
+	cursor: pointer;
+	display: none;
+	color: white;
+	font-size: 17px;
+	position: absolute;
+	bottom: -10px;
+	right: 5px;
+	border: none;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	border-bottom-left-radius: 70px;
+	border-top-left-radius: 70px;
+	width: 80px;
+	background-color: rgb(182, 14, 14);
+	transition: .2s;
+	border: rgb(182, 14, 14) 3px solid;
+	z-index: 4;
+}
+
+.item:hover .delete {
+	display: inline;
+}
+
+.delete:hover {
+	z-index: 4;
+	background-color: rgb(239, 75, 46);
+}
+
+.item:hover .icon {
+	transform: translateX(20px) scale(0.8);
+}
+
+.status {
+	font-weight: 100;
+}
+
+@media (orientation: landscape) {
+	.item {
+		height: 80px;
+		width: auto; 
+		gap: 20px;
+		border-radius: 90px;
+		padding-left: 75px;
+	}
+	.item:first-child {
+		margin-left: 40px;
+	}
+
+	.icon {
+		width: 120px;
+		left: -40px;
+	}
+}

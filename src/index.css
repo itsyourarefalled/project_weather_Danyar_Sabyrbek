@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --var-primary-purple: #4E14E6;
+  --var-blue: #7292F5;
+  --var-light-purple: #8D6EE4;
+  --var-background-white: #FCFCFC;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 7px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.143);
+  outline: 1px solid slategrey;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-x: hidden;
+  background: #121212;
+}
